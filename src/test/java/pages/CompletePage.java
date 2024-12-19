@@ -3,12 +3,10 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CompletePage {
-
-    WebDriver driver;
+public class CompletePage extends BasePage {
 
     public CompletePage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public String getFinishMessage() {

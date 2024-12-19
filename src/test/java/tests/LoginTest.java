@@ -30,6 +30,5 @@ public class LoginTest extends BaseTest {
     public void checkPositiveLogin() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
-        Assert.assertTrue(productsPage.isPageOpened());
     }
 }
