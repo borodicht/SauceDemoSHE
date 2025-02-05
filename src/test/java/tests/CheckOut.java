@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class CheckOutTest extends BaseTest {
+public class CheckOut extends BaseTest {
 
     @Test (description = "E2E тест", testName = "Проверка сквозного тестирования")
     @Epic("SD-1")
