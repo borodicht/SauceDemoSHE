@@ -8,27 +8,27 @@ public class LoginTest extends BaseTest {
     @Test
     public void checkNegativeLoginWithEmptyUsername() {
         loginPage.open();
-        loginPage.loginNegative("", "secret_sauce");
+        loginPage.loginNegative("", password);
         Assert.assertEquals(loginPage.getErrorMessage(), "Epic sadface: Username is required");
     }
 
     @Test
     public void checkNegativeLoginWithEmptyPassword() {
         loginPage.open();
-        loginPage.loginNegative("standard_user", "");
+        loginPage.loginNegative(user, "");
         Assert.assertEquals(loginPage.getErrorMessage(), "Epic sadface: Password is required");
     }
 
     @Test
     public void checkNegativeLogin() {
         loginPage.open();
-        loginPage.loginNegative("standard_user", "12345678");
+        loginPage.loginNegative(user, "12345678");
         Assert.assertEquals(loginPage.getErrorMessage(), "Epic sadface: Username and password do not match any user in this service");
     }
 
     @Test
     public void checkPositiveLogin() {
         loginPage.open();
-        loginPage.login("standard_user", "secret_sauce");
+        loginPage.login(user, password);
     }
 }

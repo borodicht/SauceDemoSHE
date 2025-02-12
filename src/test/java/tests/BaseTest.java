@@ -18,11 +18,12 @@ public class BaseTest {
     CompletePage completePage;
     OverviewPage overviewPage;
     CartPage cartPage;
+    String user = System.getProperty("user");
+    String password = System.getProperty("password");
 
     @BeforeMethod
     public void setup() {
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless");
         options.addArguments("--start-maximized");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
