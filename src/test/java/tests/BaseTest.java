@@ -34,6 +34,10 @@ public class BaseTest {
         completePage = new CompletePage(driver);
         overviewPage = new OverviewPage(driver);
         cartPage = new CartPage(driver);
+
+        System.out.println(System.getProperty("user"));
+        System.out.println(System.getProperty("password"));
+
     }
 
     @AfterMethod
