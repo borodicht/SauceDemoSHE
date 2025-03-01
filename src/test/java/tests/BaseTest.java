@@ -18,8 +18,8 @@ public class BaseTest {
     CompletePage completePage;
     OverviewPage overviewPage;
     CartPage cartPage;
-    String user = System.getProperty("user");
-    String password = System.getProperty("password");
+    String user = System.getProperty("user", utils.PropertyReader.getProperty("user"));
+    String password = System.getProperty("password", utils.PropertyReader.getProperty("password"));
 
     @BeforeMethod
     public void setup() {
