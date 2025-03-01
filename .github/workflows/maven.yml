@@ -31,10 +31,5 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
-    - name: Setup browser
-      uses: abhi1693/setup-browser@v0.3.4
-      with:
-        browser: firefox
-        version: latest
     - name: Run Test
       run: mvn clean test -Duser=$USERNAME -Dpassword=$PASSWORD
